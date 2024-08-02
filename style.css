@@ -1,0 +1,236 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Roboto+Condensed:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Root variables for colors and styling */
+:root {
+    --ci-primary-color: #FF4500;
+    --ci-primary-opacity-color: #dedede;
+    --ci-secundary-color: #c9c9c9;
+    --ci-gray-dark: #676767;
+    --ci-gray-light: #191A1E;
+    --ci-gray-medium: #ffffff;
+    --ci-gray-over: #260D69;
+    --title-color: #ffffff;
+    --text-color: #ffffff;
+    --sub-text-color: #656E78;
+    --placeholder-color: #4D565E;
+    --background-color: #24262B;
+    --standard-color: #1C1E22;
+    --shadow-color: #111415;
+    --page-shadow: linear-gradient(to right, #111415, rgba(17, 20, 21, 0));
+    --autofill-color: #f5f6f7;
+    --yellow-color: #FFBF39;
+    --yellow-dark-color: #d7a026;
+    --border-radius: .25rem;
+}
+
+/* Global styling for HTML and body */
+html, body {
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Container flex layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--standard-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--ci-primary-color);
+}
+
+.auth {
+    display: flex;
+    gap: 10px;
+}
+
+.auth a {
+    text-decoration: none;
+    color: var(--ci-primary-color);
+    font-weight: bold;
+}
+
+.login{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #333;
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  
+}
+
+.register {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px; /* Oval shape */
+    background-color: #333;
+    color: #ffd700;
+    border: 2px solid var(--ci-primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.register:hover {
+    background-color: var(--ci-primary-color);
+    color: #333;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: var(--standard-color);
+    padding: 20px;
+    position: fixed;
+    top: 70px; /* Adjusted for fixed header */
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.sidebar li a:hover{
+    background-color: #333;
+   
+}
+
+.sidebar nav ul, .sidebar .support ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li, .sidebar .support ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a, .sidebar .support ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.sidebar nav ul li a i, .sidebar .support ul li a i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* Main content styling */
+main {
+    margin-left: 270px;
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Banner section styling */
+.banner .slider {
+    display: flex;
+    overflow: hidden;
+    gap: 20px;
+}
+
+.banner .slider img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease-in-out;
+}
+
+.banner .slider img:hover {
+    transform: scale(1.05);
+}
+
+/* Latest Withdrawals section styling */
+.latest-withdrawals {
+    margin-top: 30px;
+    padding: 50px;
+    overflow-x: hidden; /* Esconde o conteúdo que extrapolar */
+    
+}
+
+
+.latest-withdrawals h2 {
+    color: var(--ci-primary-color);
+}
+
+.withdrawal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.withdrawal-item {
+    background-color: var(--standard-color);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Featured Games section styling */
+.featured-games {
+    margin-top: 30px;
+    padding: 50px;
+}
+
+.featured-games h2 {
+    color: var(--ci-primary-color);
+}
+
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.game-item img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--standard-color);
+    padding: 10px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    color: var(--text-color);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--ci-primary-color);
+    font-weight: bold;
+}
